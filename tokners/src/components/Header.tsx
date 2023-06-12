@@ -85,6 +85,16 @@ const SecondaryButton = styled(StyledButton)`
   background-color: white;
   padding: 1rem 2rem;
   border-radius: 52px;
+  transition: 0.5s;
+  outline: 1px solid transparent;
+
+  &:hover {
+    outline-color: black;
+    -webkit-box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
+    box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
+    opacity: 0.95;
+  }
 `;
 
 export const Header = () => {
