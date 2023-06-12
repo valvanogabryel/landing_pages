@@ -1,16 +1,13 @@
-import { styled } from "styled-components";
-import GlobalStyle from "./styles/GlobalStyles";
+import GlobalStyle from "./globalStyles";
+import { Header } from "./components/Header";
 
-const StyledH1 = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bolder;
-`;
+import { styled } from "styled-components";
 
 export default function App() {
   return (
     <div>
       <GlobalStyle />
-      <StyledH1>Oi</StyledH1>
+      <Header />
     </div>
   );
 }
