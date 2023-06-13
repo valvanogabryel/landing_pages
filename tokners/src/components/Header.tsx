@@ -22,17 +22,21 @@ const StyledHeader = styled.header<Props>`
       position: sticky;
       top: 0;
       margin: 0;
+      padding: 0.7rem;
+      -webkit-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
+      -moz-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
+      box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
     `}
 `;
 
 const Logo = styled.div`
   flex-grow: 0.7;
-  height: 35px;
+  height: 45px;
   width: 219px;
 `;
 
-const StyledLink = styled.a`
-  color: white;
+const StyledLink = styled.a<Props>`
+  color: ${({ scrolled }) => (scrolled ? "black" : "white")};
   text-decoration: none;
   position: relative;
   transition: 0.5s;
@@ -48,7 +52,7 @@ const StyledLink = styled.a`
     position: absolute;
     bottom: 0;
     z-index: -1;
-    transition: 0.3s;
+    transition: 0.5s;
   }
 
   &:hover {
@@ -82,17 +86,31 @@ const StyledButton = styled.button`
   line-height: 16.8px;
 `;
 
-const PrimaryButton = styled(StyledButton)`
+const PrimaryButton = styled(StyledButton)<Props>`
   font-weight: 600;
-  color: white;
+  color: ${({ scrolled }) => (scrolled ? "black" : "white")};
   &:after {
     content: "";
     display: block;
     width: 100%;
     height: 1px;
-    background: white;
+    background: ${({ scrolled }) => (scrolled ? "black" : "white")};
     margin-top: 0.1rem;
   }
+
+  ${({ scrolled }) =>
+    scrolled &&
+    css`
+      transition: 0.3s;
+
+      &:hover {
+        color: orange;
+        &:after {
+          transition: 0.3s;
+          background: orange;
+        }
+      }
+    `}
 `;
 
 const SecondaryButton = styled(StyledButton)`
@@ -104,7 +122,6 @@ const SecondaryButton = styled(StyledButton)`
   outline: 1px solid transparent;
 
   &:hover {
-    outline-color: black;
     -webkit-box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
     -moz-box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
     box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.52);
@@ -123,22 +140,30 @@ export const Header = ({ scrolled }: Props) => {
       <nav>
         <StyledList>
           <li>
-            <StyledLink href="#team">Nosso time</StyledLink>
+            <StyledLink href="#team" scrolled={scrolled}>
+              Nosso time
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#tokens">Tokens</StyledLink>
+            <StyledLink href="#tokens" scrolled={scrolled}>
+              Tokens
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#wallet">Carteira</StyledLink>
+            <StyledLink href="#wallet" scrolled={scrolled}>
+              Carteira
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#lightpaper">Lightpaper</StyledLink>
+            <StyledLink href="#lightpaper" scrolled={scrolled}>
+              Lightpaper
+            </StyledLink>
           </li>
         </StyledList>
       </nav>
       <ButtonWrapper>
         <div>
-          <PrimaryButton>Entrar</PrimaryButton>
+          <PrimaryButton scrolled={scrolled}>Entrar</PrimaryButton>
         </div>
         <div>
           <SecondaryButton>Cadastrar</SecondaryButton>

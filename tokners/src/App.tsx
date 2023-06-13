@@ -1,46 +1,30 @@
-import GlobalStyle from "./globalStyles";
-import { Header } from "./components/Header";
+import useScrollVerify from "./hooks/useScrollVerify";
+
 import { MainWavesBackground } from "./components/MainWavesBackground";
+import { Header } from "./components/Header";
 import { BlockchainSection } from "./components/BlockchainSection";
 import { Container } from "./components/Container";
 import { CardFor } from "./components/CardFor";
-import styled from "styled-components";
 import { BlackWaves } from "./components/BlackWaves";
-import { useEffect, useState } from "react";
+
+import GlobalStyle from "./globalStyles";
+import styled from "styled-components";
 
 const TwoColumns = styled.div`
   display: flex;
   justify-content: center;
   gap: 18px;
+  flex-wrap: wrap;
 `;
 
 export default function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollThreshold = 250;
-
-      if (scrollTop > scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+  const scrolled = useScrollVerify();
 
   return (
     <>
       <GlobalStyle />
       <MainWavesBackground />
-      <Header scrolled={scrolled}/>
+      <Header scrolled={scrolled} />
       <main>
         <BlockchainSection />
         <Container>
