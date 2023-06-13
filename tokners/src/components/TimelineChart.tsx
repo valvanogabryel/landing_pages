@@ -6,27 +6,69 @@ interface Props {
 }
 
 const TimelineWrapper = styled.div`
+  /* border-bottom: 1px dotted; */
+  position: relative;
+  cursor: default;
+`;
+
+const TimelineHeader = styled.div`
+  line-height: 54px;
+  position: relative;
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--light-green);
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--dark);
+  }
+`;
+
+const StyledList = styled.ul`
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    div {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--light-blue);
+    }
+  }
 `;
 
 export const TimelineChart = ({ data }: Props) => {
   return (
-    <div>
-      <div>
+    <TimelineWrapper>
+      <TimelineHeader>
         <span>{data.id}</span>
-        <h4>{data.year}</h4>
-      </div>
+        <h3>{data.year}</h3>
+      </TimelineHeader>
 
       <div>
-        <ul>
+        <StyledList>
           {data.listOfThings.map((item) => (
             <li key={item.numberInList}>
-              <div>0{item.numberInList}</div>
-              <span>{item.content}</span>
+              <span>0{item.numberInList}</span>
+              <div>{item.content}</div>
             </li>
           ))}
-        </ul>
+        </StyledList>
       </div>
-    </div>
+    </TimelineWrapper>
   );
 };

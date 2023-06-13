@@ -12,6 +12,8 @@ import { Timeline } from "./components/Timeline";
 import GlobalStyle from "./globalStyles";
 import styled from "styled-components";
 
+// #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
+
 const TwoColumns = styled.div`
   display: flex;
   justify-content: center;
