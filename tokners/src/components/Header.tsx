@@ -23,9 +23,9 @@ const StyledHeader = styled.header<Props>`
       top: 0;
       margin: 0;
       padding: 0.7rem;
-      -webkit-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
-      -moz-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
-      box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.26);
+      -webkit-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 1px 34px -3px rgba(0, 0, 0, 0.1);
     `}
 `;
 
