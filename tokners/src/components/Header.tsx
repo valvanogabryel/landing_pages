@@ -1,13 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import logo from "../assets/logo.svg";
 
-const StyledHeader = styled.header`
+interface Props {
+  scrolled: boolean | undefined;
+}
+
+const StyledHeader = styled.header<Props>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   font-size: 14px;
   margin: 2rem;
+  transition: 0.5s;
+
+  ${({ scrolled }) =>
+    scrolled &&
+    css`
+      background-color: white;
+      z-index: 9999;
+      position: sticky;
+      top: 0;
+      margin: 0;
+    `}
 `;
 
 const Logo = styled.div`
@@ -97,9 +112,9 @@ const SecondaryButton = styled(StyledButton)`
   }
 `;
 
-export const Header = () => {
+export const Header = ({ scrolled }: Props) => {
   return (
-    <StyledHeader>
+    <StyledHeader scrolled={scrolled}>
       <Logo>
         <a href="/">
           <img src={logo} alt="logo da Tokners" />
