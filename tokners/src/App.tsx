@@ -11,6 +11,9 @@ import { Timeline } from "./components/Timeline";
 
 import GlobalStyle from "./globalStyles";
 import styled from "styled-components";
+import { ToknersExplain } from "./components/ToknersExplain";
+import { GrayWaves } from "./components/GrayWaves";
+import { RocketFigure } from "./components/RocketFigure";
 
 // #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 
@@ -58,6 +61,14 @@ export default function App() {
 
         <Container>
           <Timeline />
+        </Container>
+
+        <Container>
+          <TwoColumns>
+            <ToknersExplain />
+            <RocketFigure />
+            <GrayWaves />
+          </TwoColumns>
         </Container>
       </main>
     </>

@@ -1,5 +1,7 @@
-import styled from "styled-components";
 import { TimelineItem } from "../timeline";
+import { MdKeyboardArrowRight as ArrowRight } from "react-icons/md";
+
+import styled from "styled-components";
 
 interface Props {
   data: TimelineItem;
@@ -57,6 +59,15 @@ export const TimelineChart = ({ data }: Props) => {
       <TimelineHeader>
         <span>{data.id}</span>
         <h3>{data.year}</h3>
+        <ArrowRight
+          style={{
+            position: "absolute",
+            right: "45%",
+            top: "20px",
+            fontSize: "24px",
+            opacity: "0.1",
+          }}
+        />
       </TimelineHeader>
 
       <div>
