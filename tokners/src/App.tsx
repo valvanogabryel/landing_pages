@@ -6,6 +6,8 @@ import { BlockchainSection } from "./components/BlockchainSection";
 import { Container } from "./components/Container";
 import { CardFor } from "./components/CardFor";
 import { BlackWaves } from "./components/BlackWaves";
+import { WhyUs } from "./components/WhyUs";
+import { Timeline } from "./components/Timeline";
 
 import GlobalStyle from "./globalStyles";
 import styled from "styled-components";
@@ -46,6 +48,14 @@ export default function App() {
             </CardFor>
             <BlackWaves />
           </TwoColumns>
+        </Container>
+
+        <Container>
+          <WhyUs />
+        </Container>
+
+        <Container>
+          <Timeline />
         </Container>
       </main>
     </>

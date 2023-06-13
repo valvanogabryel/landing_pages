@@ -129,7 +129,7 @@ const SecondaryButton = styled(StyledButton)`
   }
 `;
 
-export const Header = ({ scrolled }: Props) => {
+export const Header = ({ scrolled = false }: Props) => {
   return (
     <StyledHeader scrolled={scrolled}>
       <Logo>
