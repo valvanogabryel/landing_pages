@@ -5,3 +5,7 @@ export const Container = styled.section`
   margin: auto;
   position: relative;
 `;
+
+export const OuterContainer = styled(Container)`
+  max-width: 100%;
+`;

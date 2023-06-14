@@ -3,7 +3,7 @@ import useScrollVerify from "./hooks/useScrollVerify";
 import { MainWavesBackground } from "./components/MainWavesBackground";
 import { Header } from "./components/Header";
 import { BlockchainSection } from "./components/BlockchainSection";
-import { Container } from "./components/Container";
+import { Container, OuterContainer } from "./components/Container";
 import { CardFor } from "./components/CardFor";
 import { BlackWaves } from "./components/BlackWaves";
 import { WhyUs } from "./components/WhyUs";
@@ -11,11 +11,13 @@ import { Timeline } from "./components/Timeline";
 import { GrayWaves } from "./components/GrayWaves";
 import { RocketFigure } from "./components/RocketFigure";
 import { ToknersExplain } from "./components/ToknersExplain";
+import { PresaleDetails } from "./components/PresaleDetails";
 
 import GlobalStyle from "./globalStyles";
 import styled from "styled-components";
 
 import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
+import { Footer } from "./components/Footer";
 
 // #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 
@@ -29,15 +31,13 @@ const TwoColumns = styled.div`
 const BackgroundWaves = styled.div`
   width: 100%;
   height: 1708px;
-  position: relative;
+  position: absolute;
+  top: -35rem;
   z-index: -1;
 
   div {
     width: 100%;
     height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -84,18 +84,26 @@ export default function App() {
           <Timeline />
         </Container>
 
-        <Container>
-          <TwoColumns>
-            <ToknersExplain />
-            <RocketFigure />
-          </TwoColumns>
+        <OuterContainer>
           <GrayWaves />
-        </Container>
+          <Container>
+            <TwoColumns>
+              <ToknersExplain />
+              <RocketFigure />
+            </TwoColumns>
+          </Container>
+        </OuterContainer>
 
-        <BackgroundWaves>
-          <div />
-        </BackgroundWaves>
+        <OuterContainer>
+          <BackgroundWaves>
+            <div />
+          </BackgroundWaves>
+          <Container>
+            <PresaleDetails />
+          </Container>
+        </OuterContainer>
       </main>
+      <Footer />
     </>
   );
 }

@@ -7,8 +7,8 @@ const TextWrapper = styled.div`
   width: 40%;
   color: var(--dark);
   cursor: default;
-  margin-bottom: -50%;
   z-index: 1;
+  height: 110rem;
 
   h4 {
     font-size: 36px;

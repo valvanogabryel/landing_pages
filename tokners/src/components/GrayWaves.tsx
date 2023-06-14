@@ -2,16 +2,15 @@ import grayWaves from "../assets/sectionsWaves/grayWave.png";
 import styled from "styled-components";
 
 export const GrayWaves = styled.div`
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(${grayWaves});
-  height: 180%;
-  width: 118.8%;
+  height: 1618px;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  left: -10%;
   bottom: 0;
   z-index: 0;
 `;
