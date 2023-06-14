@@ -25,7 +25,7 @@ const DetailsWrapper = styled.div`
     transform: translateX(-50%);
     transition: 0.3s;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1700px) {
       display: none;
     }
 
@@ -78,11 +78,30 @@ const ImageWrapper = styled.div`
   .person {
     left: 22%;
     top: 40%;
+
+    @media (max-width: 1680px) {
+      left: 20%;
+    }
+
+    @media (max-width: 1320px) {
+      display: none;
+    }
   }
 
   .people {
     right: 25%;
     top: 40%;
+
+    @media (max-width: 1680px) {
+      right: 24%;
+    }
+    @media (max-width: 1530px) {
+      right: 23%;
+    }
+
+    @media (max-width: 1320px) {
+      display: none;
+    }
   }
 `;
 

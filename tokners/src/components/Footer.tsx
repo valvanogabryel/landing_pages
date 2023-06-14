@@ -13,11 +13,13 @@ const StyledFooter = styled.footer`
   margin-top: 10rem;
 
   @media (max-width: 1600px) {
-    margin-top: 8rem;
+    margin-top: -8rem;
+    height: 900px;
   }
 
   @media (max-width: 1460px) {
-    margin-top: 3rem;
+    margin-top: -30rem;
+    height: 1006px;
   }
 
   div {

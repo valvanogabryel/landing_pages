@@ -5,7 +5,7 @@ export const Container = styled.section`
   margin: auto;
   position: relative;
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1440px) {
     max-width: 95%;
   }
 `;

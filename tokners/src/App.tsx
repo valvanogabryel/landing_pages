@@ -47,7 +47,7 @@ const BackgroundWaves = styled.div`
   div {
     width: 100%;
     height: 100%;
-    background-position: left calc(-10rem + (10rem * (-1 * top / 100)));
+    background-position: center calc(-10rem + (10rem * (-1 * top / 100)));
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(${orangeWaves});

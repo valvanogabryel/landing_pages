@@ -12,7 +12,7 @@ const TimelineWrapper = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     max-width: 25%;
-    margin: 8rem auto;
+    margin: 16rem auto;
   }
 
   @media (max-width: 1340px) {
@@ -26,6 +26,10 @@ const TimelineWrapper = styled.div`
     top: -100px;
     transform: rotate(-2deg);
     object-fit: cover;
+
+    @media (max-width: 769px) {
+      display: none;
+    }
 
     @media (max-width: 1600px) {
       right: -30px;

@@ -6,7 +6,7 @@ const useScrollVerify = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollThreshold = 50;
+      const scrollThreshold = 25;
 
       if (scrollTop > scrollThreshold) {
         setScrolled(true);

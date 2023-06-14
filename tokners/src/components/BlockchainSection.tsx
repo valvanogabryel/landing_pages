@@ -12,7 +12,15 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 30%;
-  margin-left: 10rem;
+  margin-left: 6rem;
+
+  @media (max-width: 768px) {
+    margin-left: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 10rem;
+  }
 
   span {
     font-size: 18px;
@@ -26,6 +34,11 @@ const TextContainer = styled.div`
     color: var(--dark);
     margin: 2rem 0;
     line-height: 54px;
+
+    @media (max-width: 1024px) {
+      font-size: 32px;
+      line-height: 42px;
+    }
   }
 
   p {
@@ -34,6 +47,11 @@ const TextContainer = styled.div`
     color: var(--dark);
     opacity: 0.6;
     line-height: 24px;
+
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 `;
 
@@ -49,6 +67,11 @@ const Button = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    width: 120px;
+  }
 
   a {
     color: white;

@@ -22,6 +22,10 @@ const StyledLogoWrapper = styled.div`
   gap: 72px;
   margin-top: -12rem;
 
+  @media (max-width: 1004px) {
+    margin-top: 0;
+  }
+
   img {
     width: 55.32px;
     height: 34.5px;

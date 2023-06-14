@@ -18,6 +18,10 @@ const TextWrapper = styled.div`
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 2rem;
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -35,6 +39,11 @@ const ParagraphWrapper = styled.div`
 
     &:first-child {
       font-weight: 700;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 `;
