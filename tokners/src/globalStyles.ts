@@ -10,7 +10,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0;
+    width: 6px; 
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #F25147;
+    border-radius: 16px;
+
+    &:hover {
+      background-color: orange;
+    }
   }
 `;
 
