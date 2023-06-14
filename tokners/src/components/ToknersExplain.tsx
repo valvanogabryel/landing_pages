@@ -1,14 +1,44 @@
 import styled from "styled-components";
 
 const TextWrapper = styled.div`
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  color: var(--dark);
+  cursor: default;
+  margin-bottom: -50%;
+
+  h4 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+`;
+
+const ParagraphWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  opacity: 0.6;
+
+  p {
+    font-weight: 300;
+    line-height: 24px;
+
+    &:first-child {
+      font-weight: 700;
+    }
+  }
 `;
 
 export const ToknersExplain = () => {
   return (
     <TextWrapper>
       <h4>Tokners está chegando</h4>
-      <div>
+      <ParagraphWrapper>
         <p>
           A adoção de criptomoedas é inferior a 1% da população mundial global
           com alguns países e entidades que lutam ativamente contra sua adoção
@@ -33,8 +63,8 @@ export const ToknersExplain = () => {
           inadvertidamente, ser a "droga de entrada" para muitas pessoas
           finalmente dar a este espaço uma aparência real.
         </p>
-      </div>
-      <div>
+      </ParagraphWrapper>
+      <ParagraphWrapper>
         <p>
           Uma nova economia digital está chegando. As pessoas seriam tão
           poderosas quanto países e criadores seria pago além dos amendoins que
@@ -52,7 +82,7 @@ export const ToknersExplain = () => {
           haveria mortos presidentes no dinheiro, haveria pessoas como você no
           dinheiro, e você seria o dono porque faria mais sentido no mundo.
         </p>
-      </div>
+      </ParagraphWrapper>
     </TextWrapper>
   );
 };

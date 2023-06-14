@@ -67,8 +67,8 @@ export default function App() {
           <TwoColumns>
             <ToknersExplain />
             <RocketFigure />
-            <GrayWaves />
           </TwoColumns>
+          <GrayWaves />
         </Container>
       </main>
     </>
