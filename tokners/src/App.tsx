@@ -28,14 +28,17 @@ const TwoColumns = styled.div`
 
 const BackgroundWaves = styled.div`
   width: 100%;
-  height: 100rem;
+  height: 1708px;
   position: relative;
   z-index: -1;
 
   div {
     width: 100%;
     height: 100%;
-    background-position: center center;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(${orangeWaves});
