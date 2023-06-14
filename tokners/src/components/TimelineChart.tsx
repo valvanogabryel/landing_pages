@@ -16,6 +16,7 @@ const TimelineWrapper = styled.div`
 const TimelineHeader = styled.div`
   line-height: 54px;
   position: relative;
+  margin-bottom: 4rem;
 
   span {
     font-size: 16px;
