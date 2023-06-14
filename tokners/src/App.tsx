@@ -8,12 +8,14 @@ import { CardFor } from "./components/CardFor";
 import { BlackWaves } from "./components/BlackWaves";
 import { WhyUs } from "./components/WhyUs";
 import { Timeline } from "./components/Timeline";
+import { GrayWaves } from "./components/GrayWaves";
+import { RocketFigure } from "./components/RocketFigure";
+import { ToknersExplain } from "./components/ToknersExplain";
 
 import GlobalStyle from "./globalStyles";
 import styled from "styled-components";
-import { ToknersExplain } from "./components/ToknersExplain";
-import { GrayWaves } from "./components/GrayWaves";
-import { RocketFigure } from "./components/RocketFigure";
+
+import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
 
 // #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 
@@ -22,6 +24,22 @@ const TwoColumns = styled.div`
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
+`;
+
+const BackgroundWaves = styled.div`
+  width: 100%;
+  height: 100rem;
+  position: relative;
+  z-index: -1;
+
+  div {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(${orangeWaves});
+  }
 `;
 
 export default function App() {
@@ -70,6 +88,10 @@ export default function App() {
           </TwoColumns>
           <GrayWaves />
         </Container>
+
+        <BackgroundWaves>
+          <div />
+        </BackgroundWaves>
       </main>
     </>
   );

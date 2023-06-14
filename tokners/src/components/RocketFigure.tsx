@@ -19,6 +19,7 @@ const FiguresWrapper = styled.div`
   height: 900px;
   width: 777px;
   top: 22rem;
+  z-index: 1;
 
   img {
     position: absolute;

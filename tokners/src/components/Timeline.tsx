@@ -25,7 +25,7 @@ export const Timeline = () => {
       <TimelineBorders />
       {timelineData.map((item) => (
         <>
-          <TimelineChart data={item} />
+          <TimelineChart data={item} key={item.id} />
         </>
       ))}
       <img src={plane} alt="" />

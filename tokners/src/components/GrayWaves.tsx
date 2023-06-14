@@ -13,5 +13,5 @@ export const GrayWaves = styled.div`
   right: 0;
   left: -10%;
   bottom: 0;
-  z-index: -9999;
+  z-index: 0;
 `;
