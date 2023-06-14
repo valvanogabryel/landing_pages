@@ -20,6 +20,7 @@ const StyledCard = styled.div`
   border-radius: 25px;
   width: 45%;
   height: 930px;
+  min-width: 500px;
   position: relative;
   color: var(--dark);
 
@@ -28,6 +29,11 @@ const StyledCard = styled.div`
     font-weight: 700;
     opacity: 0.3;
     margin: 3rem auto 4rem auto;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 420px;
+    height: 800px;
   }
 `;
 
@@ -75,6 +81,10 @@ const PeopleImage = styled.div<Props>`
     height: fit-content;
     width: fit-content;
     object-fit: cover;
+
+    @media (max-width: 1340px) {
+      width: 70%;
+    }
   }
 `;
 

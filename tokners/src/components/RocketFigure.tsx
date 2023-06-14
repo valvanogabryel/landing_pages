@@ -21,6 +21,11 @@ const FiguresWrapper = styled.div`
   top: 22rem;
   z-index: 1;
 
+  @media (max-width: 1320px) {
+    height: 800px;
+    width: 500px;
+  }
+
   img {
     position: absolute;
   }
@@ -32,8 +37,26 @@ const FiguresWrapper = styled.div`
 
   .rocket {
     top: 15%;
-    left: -30%;
+    left: -25%;
     animation: ${float} 3s ease-in-out infinite;
+
+    @media (max-width: 1120px) {
+      left: -5% !important;
+    }
+
+    @media (max-width: 1320px) {
+      height: 600px;
+      width: 400px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1600px) {
+      left: -20%;
+    }
+
+    @media (max-width: 1460px) {
+      left: -20%;
+    }
   }
 
   .cloud-2 {

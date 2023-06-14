@@ -10,6 +10,10 @@ const TextWrapper = styled.div`
   z-index: 1;
   height: 110rem;
 
+  @media (max-width: 1320px) {
+    width: 45%;
+  }
+
   h4 {
     font-size: 36px;
     font-weight: 700;

@@ -7,8 +7,18 @@ import plane from "../assets/Timeline/plane.svg";
 
 const TimelineWrapper = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
   margin: 8rem 0;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    max-width: 25%;
+    margin: 8rem auto;
+  }
+
+  @media (max-width: 1340px) {
+    flex-direction: column;
+    max-width: 30%;
+  }
 
   img {
     position: absolute;
@@ -16,6 +26,15 @@ const TimelineWrapper = styled.div`
     top: -100px;
     transform: rotate(-2deg);
     object-fit: cover;
+
+    @media (max-width: 1600px) {
+      right: -30px;
+    }
+
+    @media (max-width: 1340px) {
+      top: 0;
+      right: 10%;
+    }
   }
 `;
 

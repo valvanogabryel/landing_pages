@@ -12,6 +12,14 @@ const StyledFooter = styled.footer`
   z-index: -2;
   margin-top: 10rem;
 
+  @media (max-width: 1600px) {
+    margin-top: 8rem;
+  }
+
+  @media (max-width: 1460px) {
+    margin-top: 3rem;
+  }
+
   div {
     display: flex;
     align-items: center;

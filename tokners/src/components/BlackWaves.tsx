@@ -2,7 +2,7 @@ import blackWaves from "../assets/cardsFor/waves_background.png";
 import styled from "styled-components";
 
 export const BlackWaves = styled.div`
-  background-position: left center;
+  background-position: left calc(-10rem + (10rem * (-1 * top / 100)));
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(${blackWaves});
@@ -13,4 +13,8 @@ export const BlackWaves = styled.div`
   right: 0;
   bottom: 0;
   z-index: -9999;
+
+  @media (max-width: 1138px) {
+    top: 75%;
+  }
 `;

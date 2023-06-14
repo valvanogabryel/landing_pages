@@ -10,6 +10,10 @@ const StyledWrapper = styled.div`
   width: 95%;
   margin: 0 auto;
   height: 45rem;
+
+  @media (max-width: 1140px) {
+    height: 30rem;
+  }
 `;
 
 const StyledLogoWrapper = styled.div`
@@ -29,6 +33,16 @@ const StyledLogoWrapper = styled.div`
     line-height: 54px;
     width: 356px;
     margin-top: -1rem;
+
+    @media (max-width: 1224px) {
+      font-size: 24px;
+      width: 220px;
+      line-height: 32px;
+    }
+  }
+
+  @media (max-width: 1224px) {
+    gap: 30px;
   }
 `;
 
@@ -44,6 +58,11 @@ const TextWrapper = styled.div`
     opacity: 0.6;
     line-height: 24px;
     width: 600px;
+
+    @media (max-width: 1224px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
 
     &:first-child {
       font-weight: 700;

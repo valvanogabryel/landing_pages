@@ -25,6 +25,14 @@ const DetailsWrapper = styled.div`
     transform: translateX(-50%);
     transition: 0.3s;
 
+    @media (max-width: 1440px) {
+      display: none;
+    }
+
+    @media (max-width: 1630px) {
+      bottom: -15rem;
+    }
+
     &:after {
       content: "";
       display: block;
@@ -48,6 +56,10 @@ const DetailsWrapper = styled.div`
     display: flex;
     justify-content: center;
     gap: 1rem;
+
+    @media (max-width: 998px) {
+      flex-wrap: wrap;
+    }
 
     &:nth-child(2) {
       transform: translateY(4rem);

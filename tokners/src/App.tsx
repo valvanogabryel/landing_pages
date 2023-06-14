@@ -14,18 +14,27 @@ import { ToknersExplain } from "./components/ToknersExplain";
 import { PresaleDetails } from "./components/PresaleDetails";
 
 import GlobalStyle from "./globalStyles";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
 import { Footer } from "./components/Footer";
 
 // #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 
-const TwoColumns = styled.div`
+interface TwoColumnsProps {
+  wrap?: boolean;
+}
+
+const TwoColumns = styled.div<TwoColumnsProps>`
   display: flex;
   justify-content: center;
   gap: 18px;
-  flex-wrap: wrap;
+
+  ${({ wrap }) =>
+    wrap &&
+    css`
+      flex-wrap: wrap;
+    `}
 `;
 
 const BackgroundWaves = styled.div`
@@ -38,7 +47,7 @@ const BackgroundWaves = styled.div`
   div {
     width: 100%;
     height: 100%;
-    background-position: left center;
+    background-position: left calc(-10rem + (10rem * (-1 * top / 100)));
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(${orangeWaves});
@@ -60,7 +69,7 @@ export default function App() {
           <BlackWaves />
 
           <Container>
-            <TwoColumns>
+            <TwoColumns wrap={true}>
               <CardFor role="Criadores">
                 Os criadores podem obter independência por meio de um sistema de
                 moeda digital descentralizado que é dependente de crescer e se

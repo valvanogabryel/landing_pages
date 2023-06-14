@@ -69,12 +69,20 @@ const StyledList = styled.ul`
   justify-content: space-around;
   align-items: center;
   gap: 32px;
+
+  @media (max-width: 860px) {
+    display: none;
+  }
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media (max-width: 860px) {
+    display: none;
+  }
 `;
 
 const StyledButton = styled.button`
