@@ -1,6 +1,8 @@
-import styled from "styled-components";
-import logo from "../assets/unnamed_logo.svg";
 import { Reveal } from "./Reveal";
+
+import logo from "../assets/unnamed_logo.svg";
+
+import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   display: flex;

@@ -12,15 +12,12 @@ import { GrayWaves } from "./components/GrayWaves";
 import { RocketFigure } from "./components/RocketFigure";
 import { ToknersExplain } from "./components/ToknersExplain";
 import { PresaleDetails } from "./components/PresaleDetails";
+import { Footer } from "./components/Footer";
+
+import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
 
 import GlobalStyle from "./globalStyles";
 import styled, { css } from "styled-components";
-
-import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
-import { Footer } from "./components/Footer";
-import { Reveal } from "./components/Reveal";
-
-// #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 
 interface TwoColumnsProps {
   wrap?: boolean;

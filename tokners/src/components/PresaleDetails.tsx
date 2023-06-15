@@ -1,11 +1,12 @@
+import { isMobile } from "react-device-detect";
+
 import { CardDetail } from "./CardDetails";
+import { Reveal } from "./Reveal";
+
 import person from "../assets/presaleDetails/person.png";
 import people from "../assets/presaleDetails/people.png";
 
-import { isMobile } from "react-device-detect";
-
 import styled from "styled-components";
-import { Reveal } from "./Reveal";
 
 const DetailsWrapper = styled.div`
   color: var(--dark);

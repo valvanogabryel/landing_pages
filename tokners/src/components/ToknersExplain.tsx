@@ -1,5 +1,6 @@
-import styled from "styled-components";
 import { Reveal } from "./Reveal";
+
+import styled from "styled-components";
 
 const TextWrapper = styled.div`
   display: flex;

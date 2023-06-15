@@ -1,10 +1,12 @@
-import styled from "styled-components";
-import timelineData from "../timeline";
 import { TimelineChart } from "./TimelineChart";
 import { TimelineBorders } from "./TimelineBorders";
+import { Reveal } from "./Reveal";
 
 import plane from "../assets/Timeline/plane.svg";
-import { Reveal } from "./Reveal";
+
+import timelineData from "../timeline";
+
+import styled from "styled-components";
 
 const TimelineWrapper = styled.div`
   display: flex;
