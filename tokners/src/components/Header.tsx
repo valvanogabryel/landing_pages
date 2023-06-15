@@ -1,5 +1,6 @@
-import styled, { css } from "styled-components";
 import logo from "../assets/logo.svg";
+
+import styled, { css } from "styled-components";
 
 interface Props {
   scrolled: boolean | undefined;

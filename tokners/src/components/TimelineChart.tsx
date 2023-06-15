@@ -1,5 +1,6 @@
-import { TimelineItem } from "../timeline";
 import { MdKeyboardArrowRight as ArrowRight } from "react-icons/md";
+
+import { TimelineItem } from "../timeline";
 
 import styled from "styled-components";
 

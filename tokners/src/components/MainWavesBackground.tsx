@@ -1,4 +1,5 @@
 import mainWaves from "../assets/main-waves1.png";
+
 import styled from "styled-components";
 
 export const MainWavesBackground = styled.div`

@@ -1,4 +1,5 @@
 import blackWaves from "../assets/cardsFor/waves_background.png";
+
 import styled from "styled-components";
 
 export const BlackWaves = styled.div`

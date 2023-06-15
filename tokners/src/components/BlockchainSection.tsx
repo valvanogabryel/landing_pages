@@ -1,6 +1,6 @@
 import people from "../assets/people1.png";
+
 import styled from "styled-components";
-import { Reveal } from "./Reveal";
 
 const StyledBlockchainSection = styled.section`
   display: flex;

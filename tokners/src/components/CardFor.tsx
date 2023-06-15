@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
 
+import { Reveal } from "./Reveal";
+
 import peopleCreator from "../assets/cardsFor/people_creator.png";
 import peopleHodler from "../assets/cardsFor/people_hodler.png";
+
 import styled from "styled-components";
-import { Reveal } from "./Reveal";
 
 interface Props {
   role: "Criadores" | "Hodlers";

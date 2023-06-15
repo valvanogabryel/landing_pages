@@ -1,5 +1,4 @@
 import { TimelineChart } from "./TimelineChart";
-import { TimelineBorders } from "./TimelineBorders";
 import { Reveal } from "./Reveal";
 
 import plane from "../assets/Timeline/plane.svg";
@@ -48,7 +47,6 @@ const TimelineWrapper = styled.div`
 export const Timeline = () => {
   return (
     <TimelineWrapper>
-      <TimelineBorders />
       {timelineData.map((item) => (
         <>
           <Reveal
