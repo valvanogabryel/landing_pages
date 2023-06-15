@@ -33,6 +33,10 @@ const Logo = styled.div`
   flex-grow: 0.7;
   height: 45px;
   width: 219px;
+
+  @media (max-width: 768px) {
+    transform: scale(0.8);
+  }
 `;
 
 const StyledLink = styled.a<Props>`

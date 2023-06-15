@@ -47,9 +47,9 @@ const StyledLogoWrapper = styled.div`
     width: 356px;
     margin-top: -1rem;
 
-    @media (max-width: 1224px) {
+    @media (min-width: 0px) and (max-width: 1224px) {
       font-size: 24px;
-      width: 220px;
+      width: 200px;
       line-height: 32px;
     }
   }

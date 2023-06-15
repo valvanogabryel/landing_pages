@@ -31,7 +31,11 @@ const StyledCard = styled.div`
     margin: 3rem auto 4rem auto;
   }
 
-  @media (min-width: 0px) and (max-width: 700px) {
+  @media (max-width: 320px) {
+    min-width: 265px;
+  }
+
+  @media (min-width: 321px) and (max-width: 700px) {
     width: 100px;
     height: 800px;
     min-width: 300px;
@@ -87,6 +91,10 @@ const PeopleImage = styled.div<Props>`
     height: fit-content;
     width: fit-content;
     object-fit: cover;
+
+    @media (max-width: 425px) {
+      width: 65% !important;
+    }
 
     @media (max-width: 1340px) {
       width: 70%;

@@ -13,7 +13,7 @@ export const MainWavesBackground = styled.div`
   right: 0;
   z-index: -9999;
 
-  @media (max-width: 425px) {
+  @media (max-width: 1024px) {
     height: 100%;
     width: 100%;
   }

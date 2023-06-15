@@ -29,7 +29,11 @@ const StyledCard = styled.div`
   text-align: center;
   position: relative;
 
-  @media (min-width: 0px) and (max-width: 700px) {
+  @media (max-width: 425px) {
+    min-width: 280px;
+  }
+
+  @media (min-width: 426px) and (max-width: 700px) {
     width: 100px;
   }
 `;
@@ -52,6 +56,11 @@ const NumberBackground = styled.span<CardProps>`
   position: absolute;
   top: 70px;
   opacity: 0.8;
+
+  @media (max-width: 425px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
 
 const CardHeader = styled.header`
