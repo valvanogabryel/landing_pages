@@ -2,6 +2,8 @@ import { CardDetail } from "./CardDetails";
 import person from "../assets/presaleDetails/person.png";
 import people from "../assets/presaleDetails/people.png";
 
+import { isMobile } from "react-device-detect";
+
 import styled from "styled-components";
 import { Reveal } from "./Reveal";
 
@@ -125,32 +127,44 @@ export const PresaleDetails = () => {
     <DetailsWrapper>
       <h4>Detalhes de pré-venda</h4>
       <div>
-        <Reveal
-          variants={{
-            hidden: { opacity: 0, scale: 0 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          <CardDetail img="number01" phase="Um" />
-        </Reveal>
+        {!isMobile ? (
+          <>
+            <Reveal
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+            >
+              <CardDetail img="number01" phase="Um" />
+            </Reveal>
 
-        <Reveal
-          variants={{
-            hidden: { opacity: 0, scale: 0, y: 140 },
-            visible: { opacity: 1, scale: 1, y: 0 },
-          }}
-        >
-          <CardDetail img="number02" phase="Dois" />
-        </Reveal>
+            <Reveal
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+            >
+              <CardDetail img="number02" phase="Dois" />
+            </Reveal>
 
-        <Reveal
-          variants={{
-            hidden: { opacity: 0, scale: 0 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          <CardDetail img="number03" phase="Três" />
-        </Reveal>
+            <Reveal
+              variants={{
+                hidden: { opacity: 0, scale: 0 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+            >
+              <CardDetail img="number03" phase="Três" />
+            </Reveal>
+          </>
+        ) : (
+          <>
+            <CardDetail img="number01" phase="Um" />
+
+            <CardDetail img="number02" phase="Dois" />
+
+            <CardDetail img="number03" phase="Três" />
+          </>
+        )}
 
         <ImageWrapper>
           <img src={person} alt="" className="person" />
