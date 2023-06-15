@@ -65,6 +65,13 @@ const DetailsWrapper = styled.div`
       transform: translateY(4rem);
     }
 
+    @media (max-width: 425px) {
+      &:nth-child(3) {
+        margin-top: 8rem;
+        margin-left: 0 !important;
+      }
+    }
+
     @media (max-width: 998px) {
       &:nth-child(3) {
         margin-left: 1rem;
