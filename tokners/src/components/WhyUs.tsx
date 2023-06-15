@@ -14,6 +14,10 @@ const StyledWrapper = styled.div`
   @media (max-width: 1140px) {
     height: 30rem;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 const StyledLogoWrapper = styled.div`
@@ -21,6 +25,11 @@ const StyledLogoWrapper = styled.div`
   color: var(--background-color);
   gap: 72px;
   margin-top: -12rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    margin: auto;
+  }
 
   @media (max-width: 1004px) {
     margin-top: 0;
@@ -56,12 +65,22 @@ const TextWrapper = styled.div`
   flex-grow: 0.7;
   gap: 2rem;
 
+  @media (max-width: 768px) {
+    flex-grow: 0;
+    margin: auto;
+  }
+
   p {
     font-size: 16px;
     font-weight: 300;
     opacity: 0.6;
     line-height: 24px;
     width: 600px;
+
+    @media (max-width: 640px) {
+      max-width: 300px;
+      text-align: center;
+    }
 
     @media (max-width: 1224px) {
       font-size: 14px;

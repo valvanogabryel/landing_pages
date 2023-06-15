@@ -91,6 +91,11 @@ const PeopleFigure = styled.div`
   height: 810px;
   width: 1022px;
   margin-top: -2rem;
+
+  @media (max-width: 768px) {
+    width: 350px;
+    background-position: center right;
+  }
 `;
 
 export const BlockchainSection = () => {

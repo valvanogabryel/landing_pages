@@ -8,9 +8,12 @@ interface Props {
 }
 
 const TimelineWrapper = styled.div`
-  /* border-bottom: 1px dotted; */
   position: relative;
   cursor: default;
+
+  @media (max-width: 768px) {
+    width: 25rem;
+  }
 `;
 
 const TimelineHeader = styled.div`
