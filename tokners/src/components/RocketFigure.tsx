@@ -21,6 +21,11 @@ const FiguresWrapper = styled.div`
   top: 22rem;
   z-index: 1;
 
+  @media (max-width: 610px) {
+    background: transparent;
+    display: none;
+  }
+
   @media (max-width: 1320px) {
     height: 800px;
     width: 500px;
@@ -29,16 +34,33 @@ const FiguresWrapper = styled.div`
   img {
     position: absolute;
   }
+  .cloud-1,
+  .cloud-2,
+  .rocket {
+    object-fit: cover;
+  }
+
   .cloud-1 {
     top: 10%;
     left: 10%;
     animation: ${float} 5s 1s ease-in-out infinite;
+
+    @media (max-width: 610px) {
+      height: 64px;
+      width: 100px;
+      left: 75%;
+      top: -103%;
+    }
   }
 
   .rocket {
     top: 15%;
-    left: -25%;
+    left: -5%;
     animation: ${float} 3s ease-in-out infinite;
+
+    @media (max-width: 610px) {
+      display: none;
+    }
 
     @media (max-width: 1120px) {
       left: -5% !important;
@@ -47,14 +69,13 @@ const FiguresWrapper = styled.div`
     @media (max-width: 1320px) {
       height: 600px;
       width: 400px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 1600px) {
-      left: -20%;
     }
 
     @media (max-width: 1460px) {
+      left: -20%;
+    }
+
+    @media (max-width: 1600px) {
       left: -20%;
     }
   }
@@ -64,6 +85,12 @@ const FiguresWrapper = styled.div`
     bottom: 20%;
     transform: scale(1.5);
     animation: ${float} 5s ease-in-out infinite;
+
+    @media (max-width: 610px) {
+      height: 64px;
+      width: 100px;
+      right: 100%;
+    }
   }
 `;
 

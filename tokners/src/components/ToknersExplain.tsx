@@ -10,7 +10,13 @@ const TextWrapper = styled.div`
   z-index: 1;
   height: 110rem;
 
-  @media (max-width: 1320px) {
+  @media (max-width: 610px) {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+
+  @media (min-width: 610px) and (max-width: 1320px) {
     width: 45%;
   }
 

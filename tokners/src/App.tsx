@@ -30,10 +30,18 @@ const TwoColumns = styled.div<TwoColumnsProps>`
   justify-content: center;
   gap: 18px;
 
+  @media (max-width: 610px) {
+    flex-direction: column;
+  }
+
   ${({ wrap }) =>
     wrap &&
     css`
       flex-wrap: wrap;
+
+      @media (max-width: 610px) {
+        flex-direction: row;
+      }
     `}
 `;
 
