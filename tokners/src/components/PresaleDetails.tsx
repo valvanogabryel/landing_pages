@@ -64,6 +64,13 @@ const DetailsWrapper = styled.div`
     &:nth-child(2) {
       transform: translateY(4rem);
     }
+
+    @media (max-width: 998px) {
+      &:nth-child(3) {
+        margin-left: 1rem;
+        margin-top: 8rem;
+      }
+    }
   }
 `;
 

@@ -27,6 +27,11 @@ const StyledCard = styled.div`
   min-width: 320px;
   border-radius: 25px;
   text-align: center;
+  position: relative;
+
+  @media (min-width: 0px) and (max-width: 700px) {
+    width: 100px;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -56,6 +61,10 @@ const CardHeader = styled.header`
     font-size: 32px;
     font-weight: 700;
     line-height: 54px;
+
+    @media (min-width: 0px) and (max-width: 700px) {
+      font-size: 24px;
+    }
   }
 
   span {
@@ -72,12 +81,20 @@ const CardContent = styled.main`
   p {
     font-size: 20px;
     font-weight: 700;
+
+    @media (min-width: 0px) and (max-width: 700px) {
+      font-size: 16px;
+    }
   }
 
   div {
     display: flex;
     flex-direction: column;
     font-size: 16px;
+
+    @media (min-width: 0px) and (max-width: 700px) {
+      font-size: 14px;
+    }
 
     span {
       span {
@@ -98,7 +115,7 @@ export const CardDetail = ({ img, phase }: CardProps) => {
     <StyledCard>
       <NumberBackground img={imageList[img as keyof IImages]} />
 
-      <CardWrapper className="aq">
+      <CardWrapper>
         <CardHeader>
           <h5>Fase {phase}</h5>
           <span>0/04/2021 - 16/04/2021</span>

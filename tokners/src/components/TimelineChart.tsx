@@ -14,6 +14,10 @@ const TimelineWrapper = styled.div`
   @media (max-width: 768px) {
     width: 25rem;
   }
+
+  @media (max-width: 420px) {
+    width: 20rem;
+  }
 `;
 
 const TimelineHeader = styled.div`

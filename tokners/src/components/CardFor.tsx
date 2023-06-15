@@ -31,7 +31,13 @@ const StyledCard = styled.div`
     margin: 3rem auto 4rem auto;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 0px) and (max-width: 700px) {
+    width: 100px;
+    height: 800px;
+    min-width: 300px;
+  }
+
+  @media (min-width: 701px) and (max-width: 920px) {
     min-width: 420px;
     height: 800px;
   }

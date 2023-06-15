@@ -14,6 +14,10 @@ const TextContainer = styled.div`
   max-width: 30%;
   margin-left: 6rem;
 
+  @media (max-width: 425px) {
+    max-width: 80%;
+  }
+
   @media (max-width: 768px) {
     margin-left: 3rem;
   }
@@ -35,7 +39,12 @@ const TextContainer = styled.div`
     margin: 2rem 0;
     line-height: 54px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 425px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @media (min-width: 426px) and (max-width: 1200px) {
       font-size: 32px;
       line-height: 42px;
     }
@@ -95,6 +104,10 @@ const PeopleFigure = styled.div`
   @media (max-width: 768px) {
     width: 350px;
     background-position: center right;
+  }
+
+  @media (max-width: 425px) {
+    display: none;
   }
 `;
 
