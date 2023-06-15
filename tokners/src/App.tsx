@@ -18,6 +18,7 @@ import styled, { css } from "styled-components";
 
 import orangeWaves from "./assets/presaleDetails/orangeWaves.png";
 import { Footer } from "./components/Footer";
+import { Reveal } from "./components/Reveal";
 
 // #TODO: ADICIONAR A BORDA DO TIMELINE (deixar responsiva se possível)
 

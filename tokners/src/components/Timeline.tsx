@@ -4,6 +4,7 @@ import { TimelineChart } from "./TimelineChart";
 import { TimelineBorders } from "./TimelineBorders";
 
 import plane from "../assets/Timeline/plane.svg";
+import { Reveal } from "./Reveal";
 
 const TimelineWrapper = styled.div`
   display: flex;
@@ -48,10 +49,25 @@ export const Timeline = () => {
       <TimelineBorders />
       {timelineData.map((item) => (
         <>
-          <TimelineChart data={item} key={item.id} />
+          <Reveal
+            variants={{
+              hidden: { opacity: 0, x: -75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <TimelineChart data={item} key={item.id} />
+          </Reveal>
         </>
       ))}
-      <img src={plane} alt="" />
+
+      <Reveal
+        variants={{
+          hidden: { opacity: 0, scale: 0 },
+          visible: { opacity: 1, scale: 1 },
+        }}
+      >
+        <img src={plane} alt="" />
+      </Reveal>
     </TimelineWrapper>
   );
 };

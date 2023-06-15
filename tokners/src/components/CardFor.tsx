@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import peopleCreator from "../assets/cardsFor/people_creator.png";
 import peopleHodler from "../assets/cardsFor/people_hodler.png";
 import styled from "styled-components";
+import { Reveal } from "./Reveal";
 
 interface Props {
   role: "Criadores" | "Hodlers";
@@ -108,11 +109,25 @@ export const CardFor = ({ role, children }: Props) => {
   return (
     <StyledCard>
       <span>{role.match("Criadores") ? "01" : "02"}</span>
-      <CardTitle role={role}>
-        Para <span>{role}</span>
-      </CardTitle>
+      <Reveal
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
+        <CardTitle role={role}>
+          Para <span>{role}</span>
+        </CardTitle>
+      </Reveal>
       <div>
-        <TextContent>{children}</TextContent>
+        <Reveal
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <TextContent>{children}</TextContent>
+        </Reveal>
       </div>
       <PeopleImage role={role}>
         <img src={peopleImage} alt="" />

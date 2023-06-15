@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../assets/unnamed_logo.svg";
+import { Reveal } from "./Reveal";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -101,10 +102,16 @@ export const WhyUs = () => {
   return (
     <StyledWrapper>
       <StyledLogoWrapper>
-        <img src={logo} alt="logo" />
+        <Reveal
+          variants={{
+            hidden: { opacity: 0, rotate: 0, scale: 0 },
+            visible: { opacity: 1, rotate: 360, scale: 1 },
+          }}
+        >
+          <img src={logo} alt="logo" />
+        </Reveal>
         <h3>O que nos faz diferente?</h3>
       </StyledLogoWrapper>
-
       <TextWrapper>
         <p>Só lançaríamos tokens com a permissão expressa dos criadores.</p>
         <p>
