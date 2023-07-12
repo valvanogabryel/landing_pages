@@ -86,6 +86,7 @@ const NewsletterInput = styled.input`
 `;
 
 const PlantImage = styled.div`
+  z-index: -1;
   img {
     position: relative;
     right: 30%;

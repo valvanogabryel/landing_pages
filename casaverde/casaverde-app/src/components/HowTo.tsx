@@ -17,7 +17,7 @@ const HowToCard = styled.section`
 `;
 
 const CardContent = styled.div`
-  padding: 1.94rem;
+  padding: 0 1.94rem;
 `;
 
 const HowToList = styled.ul`
@@ -30,6 +30,11 @@ const HowToList = styled.ul`
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    span {
+      font-size: 1.375rem;
+      opacity: 0.5;
+    }
   }
 `;
 
@@ -48,15 +53,15 @@ export function HowTo() {
         <HowToList>
           <li>
             <YellowCircle size={3.25} />
-            Escolha suas plantas
+            <span>Escolha suas plantas</span>
           </li>
           <li>
             <YellowCircle size={3.25} />
-            Faça seu pedido
+            <span>Faça seu pedido</span>
           </li>
           <li>
             <YellowCircle size={3.25} />
-            Aguarde na sua casa
+            <span>Aguarde na sua casa</span>
           </li>
         </HowToList>
       </CardContent>
