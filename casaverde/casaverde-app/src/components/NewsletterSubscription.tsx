@@ -12,6 +12,7 @@ const StyledContainer = styled.section`
   display: flex;
   align-items: center;
   user-select: none;
+  margin-top: -4rem;
 `;
 
 const TextsWrapper = styled.div`
