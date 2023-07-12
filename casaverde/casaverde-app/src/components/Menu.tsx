@@ -8,7 +8,7 @@ import { Link } from "./Link";
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  align-items: baseline ;
+  align-items: baseline;
   margin: 0.63rem auto;
 `;
 
@@ -22,7 +22,9 @@ export function Menu() {
   return (
     <StyledHeader>
       <div>
-        <Image src={casaverdeLogo} alt="logo da casa verde" />
+        <a href="/">
+          <Image src={casaverdeLogo} alt="logo da casa verde" />
+        </a>
       </div>
       <nav>
         <LinkList>
