@@ -18,6 +18,11 @@ const HowToCard = styled.section`
 
 const CardContent = styled.div`
   padding: 0 1.94rem;
+
+  span {
+    font-size: 1.375rem;
+    opacity: 0.5;
+  }
 `;
 
 const HowToList = styled.ul`
@@ -30,11 +35,6 @@ const HowToList = styled.ul`
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    span {
-      font-size: 1.375rem;
-      opacity: 0.5;
-    }
   }
 `;
 
@@ -46,7 +46,7 @@ export function HowTo() {
       </div>
       <CardContent>
         <span>Como conseguir</span>
-        <Title heading="h3" styles="font-size: 2.625rem">
+        <Title heading="h3" styles="font-size: 2.625rem; margin-top: 0.75rem">
           minha planta
         </Title>
 
