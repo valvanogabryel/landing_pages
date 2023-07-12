@@ -10,6 +10,7 @@ import styled from "styled-components";
 const StyledContainer = styled.section`
   display: flex;
   align-items: center;
+  user-select: none;
 `;
 
 const TextsWrapper = styled.div`
@@ -54,7 +55,11 @@ const StyledForm = styled.form`
     transition: 0.2s;
 
     &:hover {
-      opacity: 0.9;
+      background-color: ${palette.COLOR_CASAVERDE_YELLOW_HOVER};
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 `;
@@ -82,6 +87,14 @@ const NewsletterInput = styled.input`
 
   &::placeholder {
     opacity: 0.3;
+  }
+`;
+
+const PlantImage = styled.div`
+  img {
+    position: relative;
+    right: 30%;
+    z-index: -1;
   }
 `;
 
@@ -113,9 +126,9 @@ export function NewsletterSubscription() {
         </div>
       </div>
 
-      <div>
+      <PlantImage>
         <Image src={newsletterPlant} alt="imagem de uma planta" />
-      </div>
+      </PlantImage>
     </StyledContainer>
   );
 }
