@@ -1,0 +1,2 @@
+export const COLOR_CASAVERDE_YELLOW = "#FFCB47";
+export const COLOR_CASAVERDE_DARK = "#202020";

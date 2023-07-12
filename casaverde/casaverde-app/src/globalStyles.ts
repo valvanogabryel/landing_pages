@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import * as palette from "./variables";
 
 const GlobalStyles = createGlobalStyle`
 html, body, div, span, applet, object,  iframe,
@@ -46,11 +47,13 @@ table {
 }
 
   body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: #F7F7F7;
     overflow-x: hidden;
     box-sizing: border-box;
+		color: ${palette.COLOR_CASAVERDE_DARK};
+		max-width: 70%;
   }
 `;
 

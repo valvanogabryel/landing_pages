@@ -1,9 +1,11 @@
-import Image from "next/image";
+import { Menu } from "@/components/Menu";
+import { NewsletterSubscription } from "@/components/NewsletterSubscription";
 
 export default function HomePage() {
   return (
-    <div>
-      <h1>OIE</h1>
-    </div>
+    <>
+      <Menu />
+      <NewsletterSubscription />
+    </>
   );
 }
