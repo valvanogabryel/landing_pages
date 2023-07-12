@@ -22,8 +22,9 @@ const StyledLink = styled.a<LinkProps>`
   margin: 0 0.5rem;
 
   &:hover {
-    color: ${(props) =>
-      props.color === "yellow" ? "" : palette.COLOR_CASAVERDE_YELLOW};
+    /* color: ${(props) =>
+      props.color === "yellow" ? "" : palette.COLOR_CASAVERDE_YELLOW}; */
+    text-decoration: underline;
   }
 
   ${({ hasIcon }) =>

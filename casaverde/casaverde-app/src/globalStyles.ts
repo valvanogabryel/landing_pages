@@ -53,7 +53,7 @@ table {
     overflow-x: hidden;
     box-sizing: border-box;
 		color: ${palette.COLOR_CASAVERDE_DARK};
-		max-width: 70%;
+		max-width: 62.5%;
   }
 `;
 
