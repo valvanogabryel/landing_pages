@@ -1,25 +1,27 @@
 "use client";
 
 import IProducts from "@/interface/IProducts";
-import { Link } from "./Link"; 
+import { Link } from "./Link";
 import { Title } from "./Title";
-import Image from "next/image";
 import { styled } from "styled-components";
 
 const StyledCard = styled.li`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
   background-color: #fff;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.06);
-  width: 379px;
+  width: 380px;
   height: 200px;
+  overflow: hidden;
 `;
 
 const ImageWrapper = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
   img {
-    width: 100%;
+    width: 220px;
     height: 100%;
     object-fit: cover;
   }
@@ -28,10 +30,11 @@ const ImageWrapper = styled.div`
 const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.6875rem 3.375rem;
+  padding: 1.6875rem 3.375rem 1.6875rem 0;
   gap: 0.5rem;
 
   span {
+    font-weight: bold;
     opacity: 0.5;
   }
 
@@ -44,13 +47,7 @@ export function ProductCard({ product }: { product: IProducts }) {
   return (
     <StyledCard>
       <ImageWrapper>
-        <Image
-          src={product.image}
-          alt=""
-          width={100}
-          height={100}
-          quality={100}
-        />
+        <img src={product.image} alt="" />
       </ImageWrapper>
       <CardContent>
         <Title heading="h4" styles="font-size: 2rem;">
