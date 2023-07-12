@@ -1,7 +1,7 @@
 "use client";
 
 import IProducts from "@/interface/IProducts";
-import { Link } from "./Link";
+import { Link } from "./Link"; 
 import { Title } from "./Title";
 import Image from "next/image";
 import { styled } from "styled-components";

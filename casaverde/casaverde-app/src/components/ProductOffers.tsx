@@ -11,6 +11,7 @@ const ProductsContainer = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 2.75rem;
+  height: 824px;
 `;
 
 const SectionHeader = styled.header`
