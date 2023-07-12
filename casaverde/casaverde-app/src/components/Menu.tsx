@@ -4,6 +4,7 @@ import Image from "next/image";
 import casaverdeLogo from "public/images/logo.svg";
 import styled from "styled-components";
 import { Link } from "./Link";
+import { motion } from "framer-motion";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -21,28 +22,48 @@ const LinkList = styled.ul`
 export function Menu() {
   return (
     <StyledHeader>
-      <div>
+      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
         <a href="/">
           <Image src={casaverdeLogo} alt="logo da casa verde" />
         </a>
-      </div>
+      </motion.div>
       <nav>
         <LinkList>
-          <li>
+          <motion.li
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: "anticipate" }}
+          >
             <Link>Como fazer</Link> /
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, ease: "anticipate" }}
+          >
             <Link>Ofertas</Link> /
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, ease: "anticipate" }}
+          >
             <Link>Depoimentos</Link> /
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, ease: "anticipate" }}
+          >
             <Link>Vídeos</Link> /
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, ease: "anticipate" }}
+          >
             <Link>Meu carrinho</Link>
-          </li>
+          </motion.li>
         </LinkList>
       </nav>
     </StyledHeader>

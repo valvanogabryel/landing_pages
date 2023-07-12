@@ -7,6 +7,7 @@ import newsletterPlant from "public/images/newsletter-plant.png";
 import * as palette from "@/variables";
 import styled from "styled-components";
 import { Title } from "./Title";
+import { motion } from "framer-motion";
 
 const StyledContainer = styled.section`
   display: flex;
@@ -23,6 +24,7 @@ const TextsWrapper = styled.div`
     font-size: 1.375rem;
     opacity: 0.5;
     margin-bottom: 0.75rem;
+    overflow: hidden;
   }
 
   p {
@@ -85,7 +87,7 @@ const NewsletterInput = styled.input`
   }
 `;
 
-const PlantImage = styled.div`
+const PlantImage = styled(motion.div)`
   z-index: -1;
   img {
     position: relative;
@@ -99,14 +101,26 @@ export function NewsletterSubscription() {
     <StyledContainer>
       <div>
         <TextsWrapper>
-          <h3>Sua casa com as</h3>
-          <Title
-            heading="h1"
-            styles="font-size:5.125rem; 
-            margin-bottom: 1.5rem"
+          <motion.h3
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
           >
-            melhores plantas
-          </Title>
+            Sua casa com as
+          </motion.h3>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            <Title
+              heading="h1"
+              styles="font-size:5.125rem; 
+            margin-bottom: 1.5rem"
+            >
+              melhores plantas
+            </Title>
+          </motion.div>
           <p>
             Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
             torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu
@@ -128,7 +142,11 @@ export function NewsletterSubscription() {
         </div>
       </div>
 
-      <PlantImage>
+      <PlantImage
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 1 }}
+      >
         <Image src={newsletterPlant} alt="imagem de uma planta" />
       </PlantImage>
     </StyledContainer>
