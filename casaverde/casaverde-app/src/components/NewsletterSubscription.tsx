@@ -6,6 +6,7 @@ import newsletterPlant from "public/images/newsletter-plant.png";
 
 import * as palette from "@/variables";
 import styled from "styled-components";
+import { Title } from "./Title";
 
 const StyledContainer = styled.section`
   display: flex;
@@ -21,13 +22,6 @@ const TextsWrapper = styled.div`
     font-size: 1.375rem;
     opacity: 0.5;
     margin-bottom: 0.75rem;
-  }
-
-  h1 {
-    font-family: var(--font-title);
-    font-size: 5.125rem;
-    color: #202020;
-    margin-bottom: 1.5rem;
   }
 
   p {
@@ -104,7 +98,13 @@ export function NewsletterSubscription() {
       <div>
         <TextsWrapper>
           <h3>Sua casa com as</h3>
-          <h1>melhores plantas</h1>
+          <Title
+            heading="h1"
+            styles="font-size:5.125rem; 
+            margin-bottom: 1.5rem"
+          >
+            melhores plantas
+          </Title>
           <p>
             Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
             torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu
