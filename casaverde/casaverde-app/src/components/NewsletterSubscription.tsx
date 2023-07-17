@@ -43,9 +43,6 @@ const PlantImage = styled.div`
   }
 `;
 
-const key = process.env.DB_USER;
-
-console.log(key);
 
 export function NewsletterSubscription() {
   return (
